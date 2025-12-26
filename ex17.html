@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>CSS Ex17</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .sq1 {
+            width: 100%;
+            background: olivedrab;
+            height: 100px;
+            padding: 20px;
+            margin-bottom: 10px;
+            border: 5px solid white; 
+        }
+        .sq2 {
+            float: left;
+            width: 100%;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .column2{
+            float: left;
+            width: 33.3333%;
+            height: 100px;
+            padding: 20px;
+            background: skyblue;
+            border: 5px solid white; 
+        }
+        .sq3{
+            float: left;
+            width: 100%;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .column3{
+            float: left;
+            width: 25%;
+            height: 100px;
+            padding: 20px;
+            background: grey;
+            border: 5px solid white; 
+        }
+        .sq2::after, .sq3::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width: 720px) {
+            .column2{
+                width: 100%;
+            }
+            .column3{
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="sq1">
+    <p>1.1</p>
+</div>
+<div class="sq2">
+    <div class="column2">
+        <p>2.1</p>
+    </div>
+    <div class="column2">
+        <p>2.2</p>
+    </div>
+    <div class="column2">
+        <p>2.3</p>
+    </div>
+</div>
+<div class="sq3">
+    <div class="column3">
+        <p>3.1</p>
+    </div>
+    <div class="column3">
+        <p>3.2</p>
+    </div>
+    <div class="column3">
+        <p>3.3</p>
+    </div>
+    <div class="column3">
+        <p>3.4</p>
+    </div>
+</div>
+<p>Work of 1133576.</p>
+</body>
+</html>
